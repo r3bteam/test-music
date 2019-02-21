@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new Client();
 const fs = require('fs');
 const Enmap = require('enmap');
 const EnmapSQLite = require('enmap-sqlite');
@@ -69,6 +69,7 @@ for (let i = 0; i < jsfiles.length; i++) {
   const file = require(`./commands/${jsfiles[i]}`);
   const command = new file(client);
   if (typeof command.run !== 'function') throw Error(`No run function found in ${jsfiles[i]}`);
+  client.commands.set(command.name, command);
   client.log(`Command loaded: ${command.name} `);
   if (command && command.aliases && command.aliases.constructor.name === 'Array') {
     for (let i = 0; i < command.aliases.length; i++) {
