@@ -87,6 +87,6 @@ for (let i = 0; i < jsevents.length; i++) {
   client.on(jsevents[i].split('.')[0], (...args) => event.run(...args));
 }
 
-client.login(token);
+client.login(process.env.BOT_TOKEN);
 
 process.on('unhandledRejection', err => client.log(err));
