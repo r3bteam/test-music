@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const client = new Client();
 const fs = require('fs');
 const Enmap = require('enmap');
 const EnmapSQLite = require('enmap-sqlite');
@@ -63,6 +62,7 @@ class Client extends Discord.Client {
   }
 }
 
+const client = new Client();
 
 for (let i = 0; i < jsfiles.length; i++) {
   if (!jsfiles.length) throw Error('No javascript command files found!');
