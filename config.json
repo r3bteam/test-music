@@ -1,0 +1,12 @@
+{
+    "token": "",
+    "ytapikey": "AIzaSyCQapWI28_Um0n4AEGNVw7l3QZqhQF0cFs",
+    "ownerid": "479090634813341696",
+    "defaultSettings": {
+      "prefix": "-",
+      "ratelimit": false,
+      "djonly": false,
+      "djrole": "dj",
+      "maxqueuelength": 20
+    }
+  }
